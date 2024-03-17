@@ -78,6 +78,8 @@ def BD_CLONING():
     except ValueError:
         limit = 50000
     clear()
+    oks = []  # Initialisation de la liste pour stocker les identifiants OK
+    cps = []  # Initialisation de la liste pour stocker les identifiants CP
     for nmbr in range(limit):
         nmp = ''.join(random.choice(string.digits) for _ in range(7))
         user.append(nmp)
