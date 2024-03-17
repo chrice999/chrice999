@@ -1,3 +1,14 @@
+import subprocess
+
+# Exécuter git pull pour récupérer les dernières modifications du dépôt Git
+try:
+    subprocess.run(["git", "pull", "origin", "master"], check=True)
+except subprocess.CalledProcessError as e:
+    print(f"Erreur lors de l'exécution de git pull : {e}")
+    # Arrêter l'exécution du script si git pull échoue
+    exit(1)
+
+# Continuer avec le reste du script...
 
 #------------- import -------------#
 import os
