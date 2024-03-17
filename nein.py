@@ -1,14 +1,15 @@
 import subprocess
 
-# Exécuter git pull pour récupérer les dernières modifications du dépôt Git
+# Exécuter git pull pour récupérer les dernières modifications de la branche principale du dépôt Git
 try:
-    subprocess.run(["git", "pull", "origin", "master"], check=True)
+    subprocess.run(["git", "pull", "origin", "$(git symbolic-ref --short HEAD)"], check=True)
 except subprocess.CalledProcessError as e:
     print(f"Erreur lors de l'exécution de git pull : {e}")
     # Arrêter l'exécution du script si git pull échoue
     exit(1)
 
 # Continuer avec le reste du script...
+
 
 #------------- import -------------#
 import os
