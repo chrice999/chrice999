@@ -1,14 +1,28 @@
+import getpass
 import subprocess
 
-# Exécuter git pull pour récupérer les dernières modifications de la branche principale du dépôt Git
-try:
-    subprocess.run(["git", "pull", "origin", "$(git symbolic-ref --short HEAD)"], check=True)
-except subprocess.CalledProcessError as e:
-    print(f"Erreur lors de l'exécution de git pull : {e}")
-    # Arrêter l'exécution du script si git pull échoue
-    exit(1)
+# Mot de passe pour déverrouiller le script
+mot_de_passe = "ITACHI2024"
 
-# Continuer avec le reste du script...
+# Demander à l'utilisateur de saisir le mot de passe
+saisie_mot_de_passe = getpass.getpass("Veuillez entrer le mot de passe : ")
+
+# Vérifier si le mot de passe saisi est correct
+if saisie_mot_de_passe == mot_de_passe:
+    print("Mot de passe correct. Exécution de git pull...")
+    # Exécuter la commande git pull
+    try:
+        subprocess.run(["git", "pull"], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Erreur lors de l'exécution de git pull : {e}")
+        exit(1)
+    print("Git pull terminé avec succès !")
+    # Mettre ici le reste de votre script
+    # Par exemple :
+    print("Bienvenue dans le script !")
+else:
+    print("Mot de passe incorrect. Le script est verrouillé.")
+    exit()
 
 
 #------------- import -------------#
