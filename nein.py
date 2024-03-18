@@ -10,6 +10,7 @@ import re
 import sys
 import uuid
 import json
+
 # Mot de passe pour déverrouiller le script
 mot_de_passe = "ITACHI2024"
 
@@ -36,15 +37,14 @@ bblue="\033[1;34m"          # Blue
 P="\033[1;35m"        # Purple
 C="\033[1;36m"          # Cyan
 B="\033[1;37m"         # White
-my_color = [
- B,C,P,H]
+my_color = [B,C,P,H]
 warna = random.choice(my_color)
 oks=[]
 cps=[]
 loop=0
+
 #-------------logo-----------------#
 logo=(f'''{B}
-
  _____  ___    _______   __    _____  ___   
 (\"   \|"  \  /"     "| |" \  (\"   \|"  \  
 |.\\   \    |(: ______) ||  | |.\\   \    | 
@@ -53,7 +53,6 @@ logo=(f'''{B}
 |    \    \ | (:      "| /\  |\|    \    \ | 
  \___|\____\) \_______)(__\_|_)\___|\____\) 
                                             
-
 {warna}--------------------------------------------{B}
  Owner    : CHRICE999
  TOOL NAME : NEIN
@@ -62,13 +61,16 @@ logo=(f'''{B}
  Facebook : {bblue}ITACHI SQ{bblue}
  Tools    : {warna}[{M}VERSION 1.1{warna}]{warna}
 --------------------------------------------{B}''')
+
 #-------------linex def -------------#
 def linex():
     print(f'{warna}--------------------------------------------{B}')
+
 #-------------clear def -------------#
 def clear():
     clr('clear')
     print(logo)
+
 #-------------main def------------#
 def MR_ITACHI():
     clear()
@@ -81,6 +83,7 @@ def MR_ITACHI():
         BD_CLONING()
     else:
         exit(' MERCI BEAUCOUP  :)')
+
 #------------- bd clone def ----------#
 def BD_CLONING():
     user=[]
@@ -114,6 +117,7 @@ def BD_CLONING():
     print(' TOTAL CP ID '+str(len(cps)))
     input(' PRESS ENTER TO BACK  : ')
     MR_ITACHI()
+
 #------------ method crack def ---------#
 def method_crack(ids, passlist):
     global oks
@@ -160,5 +164,6 @@ def method_crack(ids, passlist):
         loop+=1
     except:
         pass
+
 #-------------end----------------#
 MR_ITACHI()
