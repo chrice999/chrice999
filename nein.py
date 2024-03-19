@@ -9,7 +9,11 @@ import requests
 import sys
 import secrets
 import getpass
-import time  # Importer le module time pour utiliser la fonction time.time()
+import time
+
+# Définition de la fonction generate_random_sequence pour générer une séquence aléatoire de longueur donnée
+def generate_random_sequence(length):
+    return [random.randint(0, 9) for _ in range(length)]
 
 # Mot de passe pour déverrouiller le script
 mot_de_passe = "ITACHI2024"
@@ -27,6 +31,9 @@ if saisie_mot_de_passe == mot_de_passe:
         print(f"Erreur lors de l'exécution de git pull : {e}")
         exit(1)
     print("Git pull terminé avec succès !")
+
+# Les autres parties du script restent inchangées...
+
 
 #-------------color----------------#
 bblack="\033[1;30m"         # Black
