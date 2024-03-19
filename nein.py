@@ -9,6 +9,7 @@ import requests
 import sys
 import secrets
 import getpass
+import time  # Importer le module time pour utiliser la fonction time.time()
 
 # Mot de passe pour déverrouiller le script
 mot_de_passe = "ITACHI2024"
@@ -42,6 +43,10 @@ warna = random.choice(my_color)
 oks=[]
 cps=[]
 loop=0
+# Liste des couleurs pour le logo, les lignes et chaque mot
+logo_colors = [B, C, P, H]
+line_colors = [bblack, M, H, byellow, bblue, P, C, B]
+word_colors = [B, C, P, H, M, byellow, bblue, P, C, B]
 #-------------logo-----------------#
 logo=(f'''{B}
 
@@ -62,7 +67,7 @@ logo=(f'''{B}
  GROUPE-FB   : [TERMUX-COMAND]
  STATUE : {H}FREE{H}
  Facebook : {bblue}ITACHI SQ{bblue}
- Tools    : {warna}[{M}VERSION 1.3{warna}]{warna}
+ Tools    : {warna}[{M}VERSION 1.5{warna}]{warna}
 --------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
@@ -98,7 +103,8 @@ def BD_CLONING():
         limit=50000
     clear()
     for nmbr in range(limit):
-        nmp=''.join(random.choice(string.digits) for _ in range(7))
+        # Utiliser la fonction generate_random_sequence pour obtenir une séquence aléatoire de 7 chiffres
+        nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
     with tred(max_workers=30) as Dipto:
         tl=str(len(user))
