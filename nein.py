@@ -9,11 +9,6 @@ import requests
 import sys
 import secrets
 import getpass
-import time
-
-# Définition de la fonction generate_random_sequence pour générer une séquence aléatoire de longueur donnée
-def generate_random_sequence(length):
-    return [random.randint(0, 9) for _ in range(length)]
 
 # Mot de passe pour déverrouiller le script
 mot_de_passe = "ITACHI2024"
@@ -31,9 +26,6 @@ if saisie_mot_de_passe == mot_de_passe:
         print(f"Erreur lors de l'exécution de git pull : {e}")
         exit(1)
     print("Git pull terminé avec succès !")
-
-# Les autres parties du script restent inchangées...
-
 
 #-------------color----------------#
 bblack="\033[1;30m"         # Black
@@ -74,7 +66,7 @@ logo=(f'''{B}
  GROUPE-FB   : [TERMUX-COMAND]
  STATUE : {H}FREE{H}
  Facebook : {bblue}ITACHI SQ{bblue}
- Tools    : {warna}[{M}VERSION 1.5{warna}]{warna}
+ Tools    : {warna}[{M}VERSION 1.3{warna}]{warna}
 --------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
@@ -110,7 +102,6 @@ def BD_CLONING():
         limit=50000
     clear()
     for nmbr in range(limit):
-        # Utiliser la fonction generate_random_sequence pour obtenir une séquence aléatoire de 7 chiffres
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
     with tred(max_workers=30) as Dipto:
@@ -176,4 +167,12 @@ def method_crack(ids, passlist):
     except:
         pass
 #-------------end----------------#
+
+# Générateur de séquence aléatoire
+def generate_random_sequence(length):
+    sequence = [random.choice(string.digits) for _ in range(length)]
+    return sequence
+
+# Appel à la fonction MR_ITACHI pour démarrer le programme
 MR_ITACHI()
+
