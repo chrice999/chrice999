@@ -66,7 +66,7 @@ logo=(f'''{B}
  GROUPE-FB   : [TERMUX-COMAND]
  STATUE : {H}FREE{H}
  Facebook : {bblue}ITACHI SQ{bblue}
- Tools    : {warna}[{M}VERSION 1.3{warna}]{warna}
+ Tools    : {warna}[{M}VERSION 1.4{warna}]{warna}
 --------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
