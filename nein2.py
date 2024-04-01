@@ -113,12 +113,12 @@ import os
 def main():
     os.system('clear')
     print(logo)
-    print(f'\x1b[38;5;155m➤  [1] RANDOM CRACK Malagasy')
+    print(f'\x1b[38;5;155m➤[1] RANDOM CRACK Malagasy')
     print(f'\x1b[38;5;155m➤[2]Handefa hafatra amin\'ny mpamorona❤️👾')
     print(f'\x1b[38;5;155m➤[3]WhatsApp groupe ❤️👾')
     print(f'\x1b[38;5;155m➤[4]Facebook groupe ❤️👾')
     print(f'\x1b[38;5;155m➤[5]ITACHI\'s account ❤️👾')
-    print(f'\x1b[38;5;155m➤  [2] EXIT TOOLS ')
+    print(f'\x1b[38;5;155m➤[6] EXIT TOOLS ')
     linex()
     t = input('\x1b[38;5;155m[➤] YOUR CHOICE : ')
     
