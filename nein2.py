@@ -1,3 +1,5 @@
+import os
+os.system('git pull')
 import marshal
 import os,sys,time,json,random,re,string,platform,base64,uuid
 from bs4 import BeautifulSoup as sop
@@ -102,21 +104,53 @@ logo=(f'''{B}
  GROUPE-FB   : [TERMUX-COMAND]
  STATUE : {H}FREE{H}
  Facebook : {bblue}ITACHI SQ{bblue}
- Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
+ Tools    : {warna}[{M}VERSION 2.1{warna}]{warna}
 --------------------------------------------{B}''')
 def linex():
 	print(f'\x1b[38;5;194m──────────────────────────────────────────────')
+import os
+
 def main():
-    os.system('clear');print(logo)
+    os.system('clear')
+    print(logo)
     print(f'\x1b[38;5;155m➤  [1] RANDOM CRACK Malagasy')
-    print(f'\x1b[38;5;155m➤  [2] EXIT TOOLS ');linex()
-    t=input('\x1b[38;5;155m[➤] YOUR CHOICE : ')
-    if t in ["1","01"]:
-        bhoot()    
-    if t in ["2","02"]:
+    print(f'\x1b[38;5;155m➤[2]Handefa hafatra amin\'ny mpamorona❤️👾')
+    print(f'\x1b[38;5;155m➤[3]WhatsApp groupe ❤️👾')
+    print(f'\x1b[38;5;155m➤[4]Facebook groupe ❤️👾')
+    print(f'\x1b[38;5;155m➤[5]ITACHI\'s account ❤️👾')
+    print(f'\x1b[38;5;155m➤  [2] EXIT TOOLS ')
+    linex()
+    t = input('\x1b[38;5;155m[➤] YOUR CHOICE : ')
+    
+    if t == "1":
+        bhoot()
+    elif t == "2":
+        os.system('xdg-open https://chat.whatsapp.com/BXZgnNPv6VwHxyzVEjWBBR ')
+        input("Press Enter to continue...")
+        main()
+    elif t == "3":
+        os.system('xdg-open https://chat.whatsapp.com/Kcj4CIXEgEcCeHGJpxaFYB ')
+        input("Press Enter to continue...")
+        main()
+    elif t == "4":
+        os.system('xdg-open https://facebook.com/groups/641144864016773/ ')
+        input("Press Enter to continue...")
+        main()
+    elif t == "5":
+        os.system('xdg-open https://www.facebook.com/DIEU.ITACHI999 ')
+        input("Press Enter to continue...")
+        main()
+    elif t == "6":
         os.system('exit')
-    if t in ["E","e"]:
+    elif t.lower() == "e":
         os.system('exit')
+    else:
+        print("Invalid choice. Please select a valid option.")
+        main()
+
+main()
+
+
    
 
 def bhoot():
