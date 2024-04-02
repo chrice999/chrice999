@@ -1,3 +1,8 @@
+# Définir le numéro de version
+version_actuelle = "1.5"
+
+
+
 import os
 import random
 import string 
