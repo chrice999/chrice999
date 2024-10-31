@@ -1,1 +1,0 @@
-print (f'tsisy zavatra ato')
